@@ -18,4 +18,8 @@ class Show < ActiveRecord::Base
     Show.find_by(rating: low_rating)
   end
 
+  def self.ratings_sum
+    Show.sum(:rating)
+  end
+
 end
